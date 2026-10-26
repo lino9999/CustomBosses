@@ -1,0 +1,93 @@
+[CENTER]
+[SIZE=6][B][COLOR=#FF3333]Custom[/COLOR][COLOR=#FFAA00]Bosses[/COLOR] Documentation[/B][/SIZE]
+[SIZE=3]Complete Administrator & Configuration Reference Guide[/SIZE]
+[/CENTER]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#FFAA00]1. Installation[/COLOR][/B][/SIZE]
+[LIST=1]
+[*]Download [B]CustomBosses-1.0.0.jar[/B] from the [URL='https://github.com/lino9999/CustomBosses/releases']Releases[/URL] page.
+[*]Drop the JAR into your server's [B]/plugins/[/B] directory.
+[*](Optional) Install [B]PlaceholderAPI[/B] for dynamic placeholders.
+[*]Restart your server. All configuration files will be automatically generated with default bosses, spawners, and altars.
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#FFAA00]2. Configuration Files[/COLOR][/B][/SIZE]
+The plugin creates four main files under [B]/plugins/CustomBosses/[/B]:
+[LIST]
+[*][B]config.yml[/B] - Global tick intervals and debug settings.
+[*][B]messages.yml[/B] - All player and administrative messages (color and hex codes supported).
+[*][B]bosses.yml[/B] - Complete definitions for bosses, equipment, immunities, attributes, abilities, and ranked drops.
+[*][B]spawners.yml[/B] - Region, coordinate, and natural spawner configurations.
+[*][B]altars.yml[/B] - Sacrificial altar positions, required tribute items, and summon settings.
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#FFAA00]3. Creating Spawners[/COLOR][/B][/SIZE]
+
+[SIZE=4][B]Region Spawners[/B][/SIZE]
+[LIST=1]
+[*]Get the admin wand using [B]/cb wand[/B].
+[*]Left-click block 1 to set Position 1.
+[*]Right-click block 2 to set Position 2.
+[*]Run: [B]/cb spawner create region <spawner_id> <boss_id>[/B]
+[*]The spawner will now periodically spawn the boss inside the designated region adhering to mob caps and day/night rules!
+[/LIST]
+
+[SIZE=4][B]Coordinate Spawners[/B][/SIZE]
+[CODE]
+coordinates:
+  spawn_shadow_lord:
+    boss_id: shadow_lord
+    world: world
+    x: 100.5
+    y: 72.0
+    z: -250.5
+    interval: 600
+    player_radius: 50.0
+    enabled: true
+[/CODE]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#FFAA00]4. Creating Sacrificial Altars[/COLOR][/B][/SIZE]
+[LIST=1]
+[*]Place the altar block in your world (e.g., Obsidian, Beacon, or Crying Obsidian).
+[*]Look directly at the block within 5 blocks.
+[*]Execute: [B]/cb altar create <altar_id> <boss_id>[/B]
+[*]A floating hologram will appear above the block immediately.
+[*]To add sacrifice items, open [B]altars.yml[/B] and specify the required materials or items.
+[/LIST]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#FFAA00]5. PlaceholderAPI Placeholders[/COLOR][/B][/SIZE]
+[TABLE]
+[TR][TH]Placeholder[/TH][TH]Description[/TH][/TR]
+[TR][TD]%custombosses_active%[/TD][TD]Total number of living bosses currently active across all worlds[/TD][/TR]
+[TR][TD]%custombosses_total%[/TD][TD]Total number of registered boss profiles loaded in memory[/TD][/TR]
+[TR][TD]%custombosses_boss_active_<boss_id>%[/TD][TD]Count of living instances of a specific boss ID[/TD][/TR]
+[TR][TD]%custombosses_boss_health_<boss_id>%[/TD][TD]Current health of the first active instance of the given boss[/TD][/TR]
+[/TABLE]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#FFAA00]6. Permissions Hierarchy[/COLOR][/B][/SIZE]
+[LIST]
+[*][B]custombosses.admin[/B] - Grants complete control over all plugin features (default: op)
+[*][B]custombosses.use[/B] - Allows basic command access
+[*][B]custombosses.menu[/B] - Allows opening the GUI control panel
+[*][B]custombosses.spawn[/B] - Allows spawning bosses via command
+[*][B]custombosses.egg[/B] - Allows obtaining boss spawn eggs
+[*][B]custombosses.egg.use[/B] - Allows right-clicking to use boss spawn eggs (default: true)
+[*][B]custombosses.wand[/B] - Allows obtaining and using the admin selection wand
+[*][B]custombosses.altar[/B] - Allows creating and modifying altars
+[*][B]custombosses.spawner[/B] - Allows creating and modifying automated spawners
+[*][B]custombosses.kill[/B] - Allows killing active bosses
+[*][B]custombosses.list[/B] - Allows listing bosses
+[*][B]custombosses.reload[/B] - Allows reloading plugin configurations
+[/LIST]

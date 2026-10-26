@@ -1,0 +1,14 @@
+Plugin originale/
+Plugin Originale/
+.work/
+.analysis/
+.verification/
+target/
+.git/
+.idea/
+.vscode/
+*.log
+*.jar
+*.zip
+*.iml
+.DS_Store

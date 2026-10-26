@@ -1,0 +1,144 @@
+bosses:
+  titan:
+    display_name: "&6&lColossal Titan"
+    entity_type: IRON_GOLEM
+    max_health: 500.0
+    attack_damage: 18.0
+    movement_speed: 0.28
+    follow_range: 40.0
+    knockback_resistance: 0.8
+    scale: 1.5
+    boss_bar:
+      enabled: true
+      title: "&6&lColossal Titan &7[&c%health%&7/&c%max_health%&7]"
+      color: YELLOW
+      style: NOTCHED_10
+      range: 35.0
+    properties:
+      glowing: true
+      silent: false
+      ai: true
+    immunities:
+      fall: true
+      fire: false
+      drown: true
+      explosion: true
+      knockback: true
+      projectile: false
+      suffocation: true
+      prevent_despawn: true
+    abilities:
+      EARTHQUAKE:
+        enabled: true
+        trigger: PERIODIC
+        chance: 80.0
+        cooldown: 12
+        range: 12.0
+        value: 10.0
+        message: "&6&lColossal Titan shakes the earth violently!"
+      LEAP:
+        enabled: true
+        trigger: PERIODIC
+        chance: 60.0
+        cooldown: 15
+        range: 20.0
+        value: 1.2
+        message: "&6&lColossal Titan leaps through the air!"
+      THORNS:
+        enabled: true
+        trigger: ON_DAMAGED
+        chance: 40.0
+        cooldown: 2
+        range: 4.0
+        value: 6.0
+      SCATTER_BLAST:
+        enabled: true
+        trigger: PERIODIC
+        chance: 50.0
+        cooldown: 20
+        range: 10.0
+        value: 3.0
+    drops:
+      drop_1:
+        material: NETHERITE_INGOT
+        chance: 100.0
+        min_amount: 1
+        max_amount: 3
+        reward_type: TOP_1
+        commands:
+          - "give %player% diamond 5"
+          - "broadcast &a%player% earned top damage against Colossal Titan!"
+      drop_2:
+        material: DIAMOND_BLOCK
+        chance: 75.0
+        min_amount: 1
+        max_amount: 2
+        reward_type: KILLER
+    rewards:
+      xp: 250
+      clear_vanilla_drops: true
+
+  shadow_lord:
+    display_name: "&8&lShadow Lord"
+    entity_type: WITHER_SKELETON
+    max_health: 350.0
+    attack_damage: 15.0
+    movement_speed: 0.32
+    follow_range: 35.0
+    knockback_resistance: 0.5
+    scale: 1.2
+    boss_bar:
+      enabled: true
+      title: "&8&lShadow Lord &7[&c%health%&7/&c%max_health%&7]"
+      color: PURPLE
+      style: PROGRESS
+      range: 30.0
+    properties:
+      glowing: false
+      silent: false
+      ai: true
+    immunities:
+      fall: true
+      fire: true
+      drown: true
+      explosion: false
+      knockback: false
+      projectile: true
+      suffocation: true
+      prevent_despawn: true
+    abilities:
+      KILL_AURA:
+        enabled: true
+        trigger: PERIODIC
+        chance: 70.0
+        cooldown: 14
+        range: 15.0
+        value: 8.0
+        message: "&8&lShadow Lord teleports into your blind spot!"
+      GETSUGA:
+        enabled: true
+        trigger: PERIODIC
+        chance: 60.0
+        cooldown: 10
+        range: 18.0
+        value: 12.0
+      FREEZE_ATTACK:
+        enabled: true
+        trigger: ON_ATTACK
+        chance: 50.0
+        duration_ticks: 80
+      SHADOW_CLONE:
+        enabled: true
+        trigger: ON_DEATH
+        chance: 100.0
+        value: 2.0
+    drops:
+      drop_1:
+        material: WITHER_ROSE
+        chance: 100.0
+        min_amount: 1
+        max_amount: 1
+        reward_type: ALL_CONTRIBUTORS
+    rewards:
+      xp: 200
+      clear_vanilla_drops: true

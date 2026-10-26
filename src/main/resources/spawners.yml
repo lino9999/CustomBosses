@@ -1,0 +1,39 @@
+regions:
+  nether_fortress_titan:
+    boss_id: titan
+    world: world_nether
+    min_x: -100
+    min_y: 50
+    min_z: -100
+    max_x: 100
+    max_y: 120
+    max_z: 100
+    interval: 600
+    mob_cap: 1
+    day_only: false
+    night_only: false
+    enabled: true
+
+coordinates:
+  spawn_shadow_lord:
+    boss_id: shadow_lord
+    world: world
+    x: 0.5
+    y: 70.0
+    z: 0.5
+    interval: 900
+    player_radius: 40.0
+    enabled: true
+
+natural:
+  overworld_shadow:
+    boss_id: shadow_lord
+    world: world
+    chance: 10.0
+    min_distance: 24.0
+    max_distance: 64.0
+    mob_cap: 2
+    min_light: 0
+    max_light: 7
+    interval: 120
+    enabled: true

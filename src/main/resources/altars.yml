@@ -1,0 +1,12 @@
+altars:
+  dark_altar:
+    boss_id: shadow_lord
+    world: world
+    x: 10
+    y: 65
+    z: 10
+    base_material: OBSIDIAN
+    hologram_title: "&6&l[ DARK ALTAR ] &eRight-click with Nether Star to summon &8Shadow Lord"
+    cooldown: 300
+    remove_block_on_summon: false
+    enabled: true

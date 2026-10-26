@@ -1,0 +1,6 @@
+# CustomBosses Configuration
+# Author: Lino
+prefix: "&8[&cCustomBosses&8] &r"
+check_interval_ticks: 20
+spawner_interval_ticks: 40
+debug: false

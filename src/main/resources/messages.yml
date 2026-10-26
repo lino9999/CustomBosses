@@ -1,0 +1,13 @@
+prefix: "&8[&cCustomBosses&8] &r"
+messages:
+  no_permission: "&cYou do not have permission to execute this command."
+  boss_spawned: "&aBoss &c%boss% &aspawned at &e%location%&a!"
+  boss_defeated: "&6&l[ VICTORY ] &c%boss% &7was defeated by &e%killer%&7!"
+  boss_not_found: "&cBoss profile '%boss%' not found."
+  reloaded: "&aConfigurations successfully reloaded."
+  killall_success: "&aRemoved all active bosses (&c%count%&a total)."
+  egg_received: "&aYou received a spawn egg for &c%boss%&a."
+  altar_created: "&aAltar '&e%altar%&a' created successfully."
+  altar_removed: "&aAltar '&e%altar%&a' has been removed."
+  spawner_created: "&aSpawner '&e%spawner%&a' created successfully."
+  spawner_removed: "&aSpawner '&e%spawner%&a' removed."

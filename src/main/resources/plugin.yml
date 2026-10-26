@@ -1,0 +1,66 @@
+name: CustomBosses
+version: ${project.version}
+main: dev.lino.custombosses.CustomBossesPlugin
+api-version: '1.21'
+author: Lino
+description: Advanced custom boss creation, automated spawners, and sacrificial altars.
+website: https://github.com/lino9999/CustomBosses
+folia-supported: true
+softdepend: [PlaceholderAPI, Citizens, WorldGuard]
+
+commands:
+  custombosses:
+    description: CustomBosses management command
+    aliases: [cboss, cb, bosses]
+    permission: custombosses.use
+    usage: /<command> [help|menu|spawn|spawnegg|wand|altar|spawner|killall|reload]
+
+permissions:
+  custombosses.admin:
+    description: Grants all administrative permissions for CustomBosses
+    default: op
+    children:
+      custombosses.use: true
+      custombosses.menu: true
+      custombosses.spawn: true
+      custombosses.egg: true
+      custombosses.egg.use: true
+      custombosses.wand: true
+      custombosses.altar: true
+      custombosses.spawner: true
+      custombosses.kill: true
+      custombosses.list: true
+      custombosses.reload: true
+  custombosses.use:
+    description: Allows using basic boss commands
+    default: op
+  custombosses.menu:
+    description: Allows opening the GUI menu
+    default: op
+  custombosses.spawn:
+    description: Allows direct boss spawning
+    default: op
+  custombosses.egg:
+    description: Allows giving boss spawn eggs
+    default: op
+  custombosses.egg.use:
+    description: Allows placing boss spawn eggs
+    default: true
+  custombosses.wand:
+    description: Allows using the admin selection wand
+    default: op
+  custombosses.altar:
+    description: Allows creating and managing altars
+    default: op
+  custombosses.spawner:
+    description: Allows creating and managing spawners
+    default: op
+  custombosses.kill:
+    description: Allows executing killall command
+    default: op
+  custombosses.list:
+    description: Allows listing registered bosses
+    default: op
+  custombosses.reload:
+    description: Allows reloading configurations
+    default: op
